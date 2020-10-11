@@ -2,6 +2,7 @@ import React from "react";
 import { ThemeProvider } from "react-jss";
 
 import Layout from "./components/Layout";
+import Articles from "./components/Articles";
 import theme from "./theme";
 import useFetchNews from "./components/lib/useFetchNews";
 import { newsContext } from "./components/lib/newsContext";
@@ -16,7 +17,7 @@ function App() {
       <ThemeProvider theme={theme}>
         <Layout>
           <div>Bookmark</div>
-          <div>Article</div>
+          <Articles />
         </Layout>
       </ThemeProvider>
     </newsContext.Provider>
