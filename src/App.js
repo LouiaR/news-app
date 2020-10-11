@@ -1,10 +1,14 @@
 import React from "react";
+import { ThemeProvider } from "react-jss";
+
+import Layout from "./components/Layout";
+import theme from "./theme";
 
 function App() {
   return (
-    <div>
-      <h1>The Spectator</h1>
-    </div>
+    <ThemeProvider theme={theme}>
+      <Layout></Layout>
+    </ThemeProvider>
   );
 }
 
