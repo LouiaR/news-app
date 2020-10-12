@@ -14,7 +14,13 @@ const useFetchNews = (url) => {
     const getData = async (url) => {
       dispatch({ type: "LOADING" });
       try {
-        const res = await fetch(url);
+        const res = await fetch(url, {
+          method: "GET",
+          mode: "cors",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
         const json = await res.json();
         const { articles } = json;
         if (mounted) {
