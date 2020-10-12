@@ -7,22 +7,30 @@ const useFetchNews = (url) => {
   useEffect(() => {
     let mounted = true; // Prevent memory leak if component is unmounted before fetching is completed
 
+    // Check local storage data and store bookmarked article on state
+
+    // When app load check local storage and dispatch 'GET_CACHE_ITEMS' action to store its content in state.book, dispatch 'BOOKMARK' to add or remove item from local cache and format data fetched from api by adding 'isMarked' propriety
+
     const getData = async (url) => {
       dispatch({ type: "LOADING" });
       try {
         const res = await fetch(url);
         const json = await res.json();
+        const { articles } = json;
         if (mounted) {
-          // Run if api key is invalid for example
-          if (json.status === "error") {
-            return dispatch({ type: "FETCH_ERROR", payload: json.message });
-          }
-          console.log("err", json.message);
-          const { articles } = json;
           dispatch({ type: "FETCH_SUCCESS", payload: articles });
+          // Run this if local storage 'bookmark' is set
+          if (localStorage.getItem("bookmark")) {
+            let items = JSON.parse(localStorage.getItem("bookmark"));
+            items = { ...items };
+            // Save cache items in state.bookmark
+            dispatch({ type: "GET_CACHE_ITEMS", payload: items });
+            // Run this to massage data and add 'isMarked'  field so that bookmark item will be highlighted
+            dispatch({ type: "BOOKMARK", payload: items });
+          }
         }
       } catch (err) {
-        dispatch({ type: "FETCH_ERROR", payload: err.message });
+        dispatch({ type: "FETCH_ERROR", payload: err });
       } finally {
         if (mounted) {
           dispatch({ type: "FINISH_LOADING" });

@@ -7,16 +7,16 @@ export const add = (theme) => ({
   width: "10em",
   height: "2.4em",
   borderRadius: "1em",
-  margin: "4em 0",
   cursor: "pointer",
   textTransform: "uppercase",
   fontWeight: "bold",
   fontSize: "1.8em",
   color: theme.colors.red,
+  margin: "2.5em 0",
   "&:disabled": {
     color: theme.colors.lightGrey,
-    backgroundColor: theme.colors.lightGrey2,
-    borderColor: theme.colors.lightGrey2,
+    backgroundColor: theme.colors.lightGrey3,
+    borderColor: theme.colors.lightGrey3,
     cursor: "not-allowed",
     "& span": {
       color: theme.colors.green,
@@ -26,8 +26,7 @@ export const add = (theme) => ({
   },
   "@media (min-width: 42.5em)": {
     height: "2em",
-    margin: "2em 0",
-    width: "5em",
+    width: "7em",
     fontSize: "1.3em",
   },
 });

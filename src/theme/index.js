@@ -4,6 +4,7 @@ const theme = {
     lightRed: "rgba(211, 13, 29, 0.2)",
     lightGrey: "rgba(38, 34, 34, 0.5)",
     lightGrey2: "rgba(38, 34, 34, 0.6)",
+    lightGrey3: "rgba(38, 34, 34, 0.2)",
     white: "#ffffff",
     black: "#262222",
     green: "#29724c",

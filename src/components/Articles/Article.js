@@ -16,12 +16,7 @@ const styles = createUseStyles((theme) => ({
   headline: headline(),
   author: author(theme),
   cta: add(theme),
-  imageWrapper: {
-    ...wrapper(),
-    "@media (min-width: 42.5em)": {
-      height: "200px",
-    },
-  },
+  imageWrapper: wrapper(),
   picture: image(),
   star: star(),
 }));

@@ -8,5 +8,6 @@ export const author = (theme) => ({
   fontStyle: "italic",
   "@media (min-width: 42.5em)": {
     fontSize: "2rem",
+    padding: "0 2em 0 0",
   },
 });
