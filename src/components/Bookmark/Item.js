@@ -4,7 +4,7 @@ import { createUseStyles, useTheme } from "react-jss";
 import { author, headline, remove, wrapper } from "../styles";
 
 const styles = createUseStyles((theme) => ({
-  newsBlock: {
+  bookmarkItem: {
     position: "relative",
     boxShadow: "inset 0 1.5px 0 0 #ebebeb",
     padding: "1em",
@@ -38,7 +38,7 @@ const Item = ({ article, bookmark, dispatch }) => {
     dispatch({ type: "UNBOOKMARK", payload: bookmark });
   };
   return (
-    <div className={classes.newsBlock}>
+    <div className={classes.bookmarkItem}>
       <div className={classes.wrapper}>
         <div className={classes.copyWrapper}>
           <p className={classes.author}>{article.author}</p>

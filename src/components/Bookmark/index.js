@@ -8,8 +8,8 @@ import { author, headline, lineWrapper, line1, line2 } from "../styles";
 const styles = createUseStyles((theme) => ({
   bookmark: {
     display: "block",
-    "@media (min-width: 68em)": {
-      width: "300px",
+    "@media (min-width: 42.5em)": {
+      width: "25%",
     },
   },
   section: {
