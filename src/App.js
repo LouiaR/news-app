@@ -3,6 +3,7 @@ import { ThemeProvider } from "react-jss";
 
 import Layout from "./components/Layout";
 import Articles from "./components/Articles";
+import Bookmark from "./components/Bookmark";
 import theme from "./theme";
 import useFetchNews from "./components/lib/useFetchNews";
 import { newsContext } from "./components/lib/newsContext";
@@ -16,7 +17,7 @@ function App() {
     <newsContext.Provider value={{ dispatch, state }}>
       <ThemeProvider theme={theme}>
         <Layout>
-          <div>Bookmark</div>
+          <Bookmark />
           <Articles />
         </Layout>
       </ThemeProvider>

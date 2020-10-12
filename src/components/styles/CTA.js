@@ -25,9 +25,10 @@ export const add = (theme) => ({
     },
   },
   "@media (min-width: 42.5em)": {
-    margin: "2em 0",
-    width: "8em",
     height: "2em",
+    margin: "2em 0",
+    width: "5em",
+    fontSize: "1.3em",
   },
 });
 
@@ -36,4 +37,19 @@ export const star = () => ({
   display: "block",
   lineHeight: "1",
   paddingLeft: ".5em",
+});
+
+export const remove = (theme) => ({
+  position: "absolute",
+  top: "10px",
+  right: "0px",
+  fontSize: " 3rem",
+  color: theme.colors.red,
+  border: "solid 0.5px #d30d1d",
+  borderRadius: "30px",
+  boxShadow: "2px 2px 0 0 rgba(211, 13, 29, 0.05), inset 2px 2px 0 0 #ffffff",
+  width: "30px",
+  height: "30px",
+  textAlign: "center",
+  lineHeight: "30px",
 });

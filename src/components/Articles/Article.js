@@ -1,37 +1,27 @@
 import React from "react";
 import { createUseStyles, useTheme } from "react-jss";
 
-import {
-  author,
-  headline,
-  add,
-  card,
-  image,
-  imageWrapper,
-  star,
-} from "../styles";
+import { author, headline, add, card, image, wrapper, star } from "../styles";
 
 const styles = createUseStyles((theme) => ({
   newsCard: card(),
   wrapper: {
-    "@media (min-width: 68em)": {
+    "@media (min-width: 42.5em)": {
       display: "flex",
       flexDirection: "column",
-      width: "100%",
-      height: "100%",
       margin: "1rem 0",
-      color: theme.colors.red,
-      textDecoration: "none",
     },
   },
-  copyWrapper: {
-    width: "100%",
-    height: "100%",
-  },
+  copyWrapper: wrapper(),
   headline: headline(),
   author: author(theme),
   cta: add(theme),
-  imageWrapper: imageWrapper(),
+  imageWrapper: {
+    ...wrapper(),
+    "@media (min-width: 42.5em)": {
+      height: "200px",
+    },
+  },
   picture: image(),
   star: star(),
 }));
