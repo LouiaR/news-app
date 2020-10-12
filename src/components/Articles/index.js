@@ -1,7 +1,7 @@
 import React from "react";
 import { createUseStyles, useTheme } from "react-jss";
 
-import Article from "./article";
+import Article from "./Article";
 import { useNewsContext } from "../lib/newsContext";
 
 const useStyles = createUseStyles((theme) => ({
