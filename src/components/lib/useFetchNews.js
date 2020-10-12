@@ -19,6 +19,7 @@ const useFetchNews = (url) => {
           mode: "cors",
           headers: {
             "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*",
           },
         });
         const json = await res.json();
